@@ -4,11 +4,11 @@ subtitle: "Brief intro to R <br> `r emo::ji('raised_hands')`"
 author: "Ivan Castro <br /> VISN 2 CIH - Syracuse"
 output:
   xaringan::moon_reader:
-    css: [default, shinobi, default-fonts]
+    css: ["shinobi-mod.css", "default"]
     lib_dir: libs
     nature:
       highlightLines: true
-      highlightStyle: github
+      highlightStyle: tomorrow-night-eighties
       countIncrementalSlides: false
 ---
 
@@ -30,6 +30,7 @@ library(DT)
 - The content presented today is largely based on the [Data science in a Box](https://datasciencebox.org/content/explore/) materials
 
 - Given our roles, we will focus on:
+
   1. How to start interacting with R  
   2. How to wrangle data in R  
 
@@ -43,7 +44,7 @@ library(DT)
 - Advanced visualization
 - Data modelling
 - Handling spatial data
---
+
 ---
 
 class: center 
@@ -58,11 +59,10 @@ class: center
 ]
 
 --
+
 .center[
 ![](https://github.com/hadley/r4ds/raw/master/diagrams/data-science-wrangle.png)
 ]
-
---
 
 ---
 
@@ -260,7 +260,7 @@ library(package_name)
 ```{r eval = FALSE}
 install.packages(c("tidyverse", "devtools", "datasauRus", "fivethirtyeight", "janitor"))
 ```
---
+
 ---
 
 ## tidyverse
@@ -430,6 +430,7 @@ knitr::include_graphics("img/phd_comics_vc.gif")
 - Git is a version control system -- like “Track Changes” features from Microsoft Word on steroids. GitHub is the home for your Git-based projects on the internet -- like DropBox but much, much better).
 
 --
+
 - There are millions of git commands -- ok, that's an exaggeration, but there are a lot of them -- and very few people know them all. 99% of the time you will use git to add, commit, push, and pull.
 
 --
@@ -478,7 +479,6 @@ class: center, middle
 !@#$%^&*()
 ]
 
---
 ---
 ## Tidy data
 
@@ -488,13 +488,13 @@ class: center, middle
 
 --
 
+
 ![](https://raw.githubusercontent.com/hadley/r4ds/master/images/tidy-1.png)
 
 .footnote[
 ➥ Source: [R for Data Science](https://r4ds.had.co.nz/)
 ]
 
---
 
 ---
 ## Summary tables 
