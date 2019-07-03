@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>Brief intro to R   🙌</title>
+    <title>Welcome</title>
     <meta charset="utf-8" />
     <meta name="author" content="Ivan Castro   VISN 2 CIH - Syracuse" />
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
@@ -21,7 +21,8 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Brief intro to R <br> 🙌
+# Welcome
+## Brief intro to R <br> 🙌
 ### Ivan Castro <br /> VISN 2 CIH - Syracuse
 
 ---
@@ -632,40 +633,28 @@ names(ncbikecrash)
 ```
 
 ```
-##  [1] "object_id"                       "city"                           
-##  [3] "county"                          "region"                         
-##  [5] "development"                     "locality"                       
-##  [7] "on_road"                         "rural_urban"                    
-##  [9] "speed_limit"                     "traffic_control"                
-## [11] "weather"                         "workzone"                       
-## [13] "bike_age"                        "bike_age_group"                 
-## [15] "bike_alcohol"                    "bike_alcohol_drugs"             
-## [17] "bike_direction"                  "bike_injury"                    
-## [19] "bike_position"                   "bike_race"                      
-## [21] "bike_sex"                        "driver_age"                     
-## [23] "driver_age_group"                "driver_alcohol"                 
-## [25] "driver_alcohol_drugs"            "driver_est_speed"               
-## [27] "driver_injury"                   "driver_race"                    
-## [29] "driver_sex"                      "driver_vehicle_type"            
-## [31] "crash_alcohol"                   "crash_date"                     
-## [33] "crash_day"                       "crash_group"                    
-## [35] "crash_hour"                      "crash_location"                 
-## [37] "crash_month"                     "crash_severity"                 
-## [39] "crash_time"                      "crash_type"                     
-## [41] "crash_year"                      "ambulance_req"                  
-## [43] "hit_run"                         "light_condition"                
-## [45] "road_character"                  "road_class"                     
-## [47] "road_condition"                  "road_configuration"             
-## [49] "road_defects"                    "road_feature"                   
-## [51] "road_surface"                    "num_bikes_ai"                   
-## [53] "num_bikes_bi"                    "num_bikes_ci"                   
-## [55] "num_bikes_ki"                    "num_bikes_no"                   
-## [57] "num_bikes_to"                    "num_bikes_ui"                   
-## [59] "num_lanes"                       "num_units"                      
-## [61] "distance_mi_from"                "frm_road"                       
-## [63] "rte_invd_cd"                     "towrd_road"                     
-## [65] "geo_point"                       "geo_shape"                      
-## [67] "driver_alcohol_drugs_simplified"
+##  [1] "object_id"            "city"                 "county"              
+##  [4] "region"               "development"          "locality"            
+##  [7] "on_road"              "rural_urban"          "speed_limit"         
+## [10] "traffic_control"      "weather"              "workzone"            
+## [13] "bike_age"             "bike_age_group"       "bike_alcohol"        
+## [16] "bike_alcohol_drugs"   "bike_direction"       "bike_injury"         
+## [19] "bike_position"        "bike_race"            "bike_sex"            
+## [22] "driver_age"           "driver_age_group"     "driver_alcohol"      
+## [25] "driver_alcohol_drugs" "driver_est_speed"     "driver_injury"       
+## [28] "driver_race"          "driver_sex"           "driver_vehicle_type" 
+## [31] "crash_alcohol"        "crash_date"           "crash_day"           
+## [34] "crash_group"          "crash_hour"           "crash_location"      
+## [37] "crash_month"          "crash_severity"       "crash_time"          
+## [40] "crash_type"           "crash_year"           "ambulance_req"       
+## [43] "hit_run"              "light_condition"      "road_character"      
+## [46] "road_class"           "road_condition"       "road_configuration"  
+## [49] "road_defects"         "road_feature"         "road_surface"        
+## [52] "num_bikes_ai"         "num_bikes_bi"         "num_bikes_ci"        
+## [55] "num_bikes_ki"         "num_bikes_no"         "num_bikes_to"        
+## [58] "num_bikes_ui"         "num_lanes"            "num_units"           
+## [61] "distance_mi_from"     "frm_road"             "rte_invd_cd"         
+## [64] "towrd_road"           "geo_point"            "geo_shape"
 ```
 
 and see detailed descriptions with `?ncbikecrash`.
@@ -685,74 +674,73 @@ glimpse(ncbikecrash)
 
 ```
 ## Observations: 7,467
-## Variables: 67
-## $ object_id                       &lt;int&gt; 1686, 1674, 1673, 1687, 1653, 16…
-## $ city                            &lt;chr&gt; "None - Rural Crash", "Henderson…
-## $ county                          &lt;chr&gt; "Wayne", "Vance", "Lincoln", "Co…
-## $ region                          &lt;chr&gt; "Coastal", "Piedmont", "Piedmont…
-## $ development                     &lt;chr&gt; "Farms, Woods, Pastures", "Resid…
-## $ locality                        &lt;chr&gt; "Rural (&lt;30% Developed)", "Mixed…
-## $ on_road                         &lt;chr&gt; "SR 1915", "NICHOLAS ST", "US 32…
-## $ rural_urban                     &lt;chr&gt; "Rural", "Urban", "Rural", "Urba…
-## $ speed_limit                     &lt;chr&gt; "50 - 55  MPH", "30 - 35  MPH", …
-## $ traffic_control                 &lt;chr&gt; "No Control Present", "Stop Sign…
-## $ weather                         &lt;chr&gt; "Clear", "Clear", "Clear", "Rain…
-## $ workzone                        &lt;chr&gt; "No", "No", "No", "No", "No", "N…
-## $ bike_age                        &lt;chr&gt; "52", "66", "33", "52", "22", "1…
-## $ bike_age_group                  &lt;chr&gt; "50-59", "60-69", "30-39", "50-5…
-## $ bike_alcohol                    &lt;chr&gt; "No", "No", "No", "Yes", "No", "…
-## $ bike_alcohol_drugs              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ bike_direction                  &lt;chr&gt; "With Traffic", "With Traffic", …
-## $ bike_injury                     &lt;chr&gt; "B: Evident Injury", "C: Possibl…
-## $ bike_position                   &lt;chr&gt; "Bike Lane / Paved Shoulder", "T…
-## $ bike_race                       &lt;chr&gt; "Black", "Black", "White", "Blac…
-## $ bike_sex                        &lt;chr&gt; "Male", "Male", "Male", "Male", …
-## $ driver_age                      &lt;chr&gt; "34", NA, "37", "55", "25", "17"…
-## $ driver_age_group                &lt;chr&gt; "30-39", NA, "30-39", "50-59", "…
-## $ driver_alcohol                  &lt;chr&gt; "No", "Missing", "No", "No", "No…
-## $ driver_alcohol_drugs            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ driver_est_speed                &lt;chr&gt; "51-55 mph", "6-10 mph", "41-45 …
-## $ driver_injury                   &lt;chr&gt; "O: No Injury", "Unknown Injury"…
-## $ driver_race                     &lt;chr&gt; "White", "Unknown/Missing", "His…
-## $ driver_sex                      &lt;chr&gt; "Male", NA, "Female", "Male", "M…
-## $ driver_vehicle_type             &lt;chr&gt; "Single Unit Truck (2-Axle, 6-Ti…
-## $ crash_alcohol                   &lt;chr&gt; "No", "No", "No", "Yes", "No", "…
-## $ crash_date                      &lt;chr&gt; "11DEC2013", "20NOV2013", "03NOV…
-## $ crash_day                       &lt;chr&gt; "Wednesday", "Wednesday", "Sunda…
-## $ crash_group                     &lt;chr&gt; "Motorist Overtaking Bicyclist",…
-## $ crash_hour                      &lt;int&gt; 6, 20, 18, 18, 13, 17, 17, 7, 15…
-## $ crash_location                  &lt;chr&gt; "Non-Intersection", "Intersectio…
-## $ crash_month                     &lt;chr&gt; "December", "November", "Novembe…
-## $ crash_severity                  &lt;chr&gt; "B: Evident Injury", "C: Possibl…
-## $ crash_time                      &lt;drtn&gt; 06:10:00, 20:41:00, 18:05:00, 1…
-## $ crash_type                      &lt;chr&gt; "Motorist Overtaking - Undetecte…
-## $ crash_year                      &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 20…
-## $ ambulance_req                   &lt;chr&gt; "Yes", "No", "Yes", "Yes", "Yes"…
-## $ hit_run                         &lt;chr&gt; "No", "Yes", "No", "No", "No", "…
-## $ light_condition                 &lt;chr&gt; "Dark - Roadway Not Lighted", NA…
-## $ road_character                  &lt;chr&gt; "Straight - Level", "Straight - …
-## $ road_class                      &lt;chr&gt; "State Secondary Route", "Local …
-## $ road_condition                  &lt;chr&gt; "Dry", "Dry", "Dry", "Water (Sta…
-## $ road_configuration              &lt;chr&gt; "Two-Way, Not Divided", "Two-Way…
-## $ road_defects                    &lt;chr&gt; "None", NA, "None", "None", "Non…
-## $ road_feature                    &lt;chr&gt; "No Special Feature", "T-Interse…
-## $ road_surface                    &lt;chr&gt; "Coarse Asphalt", "Smooth Asphal…
-## $ num_bikes_ai                    &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-## $ num_bikes_bi                    &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-## $ num_bikes_ci                    &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-## $ num_bikes_ki                    &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-## $ num_bikes_no                    &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-## $ num_bikes_to                    &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-## $ num_bikes_ui                    &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-## $ num_lanes                       &lt;chr&gt; "2 lanes", "2 lanes", "2 lanes",…
-## $ num_units                       &lt;int&gt; 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,…
-## $ distance_mi_from                &lt;chr&gt; "0", "0", "0", "0", "0", "0", "0…
-## $ frm_road                        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ rte_invd_cd                     &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-## $ towrd_road                      &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ geo_point                       &lt;chr&gt; "35.3336070056, -77.9955023901",…
-## $ geo_shape                       &lt;chr&gt; "{\"type\": \"Point\", \"coordin…
-## $ driver_alcohol_drugs_simplified &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, …
+## Variables: 66
+## $ object_id            &lt;int&gt; 1686, 1674, 1673, 1687, 1653, 1665, 1642, 1…
+## $ city                 &lt;chr&gt; "None - Rural Crash", "Henderson", "None - …
+## $ county               &lt;chr&gt; "Wayne", "Vance", "Lincoln", "Columbus", "N…
+## $ region               &lt;chr&gt; "Coastal", "Piedmont", "Piedmont", "Coastal…
+## $ development          &lt;chr&gt; "Farms, Woods, Pastures", "Residential", "F…
+## $ locality             &lt;chr&gt; "Rural (&lt;30% Developed)", "Mixed (30% To 70…
+## $ on_road              &lt;chr&gt; "SR 1915", "NICHOLAS ST", "US 321", "W BURK…
+## $ rural_urban          &lt;chr&gt; "Rural", "Urban", "Rural", "Urban", "Urban"…
+## $ speed_limit          &lt;chr&gt; "50 - 55  MPH", "30 - 35  MPH", "50 - 55  M…
+## $ traffic_control      &lt;chr&gt; "No Control Present", "Stop Sign", "Double …
+## $ weather              &lt;chr&gt; "Clear", "Clear", "Clear", "Rain", "Clear",…
+## $ workzone             &lt;chr&gt; "No", "No", "No", "No", "No", "No", "No", "…
+## $ bike_age             &lt;chr&gt; "52", "66", "33", "52", "22", "15", "41", "…
+## $ bike_age_group       &lt;chr&gt; "50-59", "60-69", "30-39", "50-59", "20-24"…
+## $ bike_alcohol         &lt;chr&gt; "No", "No", "No", "Yes", "No", "No", "No", …
+## $ bike_alcohol_drugs   &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
+## $ bike_direction       &lt;chr&gt; "With Traffic", "With Traffic", "With Traff…
+## $ bike_injury          &lt;chr&gt; "B: Evident Injury", "C: Possible Injury", …
+## $ bike_position        &lt;chr&gt; "Bike Lane / Paved Shoulder", "Travel Lane"…
+## $ bike_race            &lt;chr&gt; "Black", "Black", "White", "Black", "White"…
+## $ bike_sex             &lt;chr&gt; "Male", "Male", "Male", "Male", "Female", "…
+## $ driver_age           &lt;chr&gt; "34", NA, "37", "55", "25", "17", NA, "50",…
+## $ driver_age_group     &lt;chr&gt; "30-39", NA, "30-39", "50-59", "25-29", "0-…
+## $ driver_alcohol       &lt;chr&gt; "No", "Missing", "No", "No", "No", "No", "M…
+## $ driver_alcohol_drugs &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
+## $ driver_est_speed     &lt;chr&gt; "51-55 mph", "6-10 mph", "41-45 mph", "11-1…
+## $ driver_injury        &lt;chr&gt; "O: No Injury", "Unknown Injury", "O: No In…
+## $ driver_race          &lt;chr&gt; "White", "Unknown/Missing", "Hispanic", "Bl…
+## $ driver_sex           &lt;chr&gt; "Male", NA, "Female", "Male", "Male", "Fema…
+## $ driver_vehicle_type  &lt;chr&gt; "Single Unit Truck (2-Axle, 6-Tire)", NA, "…
+## $ crash_alcohol        &lt;chr&gt; "No", "No", "No", "Yes", "No", "No", "No", …
+## $ crash_date           &lt;chr&gt; "11DEC2013", "20NOV2013", "03NOV2013", "14D…
+## $ crash_day            &lt;chr&gt; "Wednesday", "Wednesday", "Sunday", "Saturd…
+## $ crash_group          &lt;chr&gt; "Motorist Overtaking Bicyclist", "Bicyclist…
+## $ crash_hour           &lt;int&gt; 6, 20, 18, 18, 13, 17, 17, 7, 15, 2, 12, 22…
+## $ crash_location       &lt;chr&gt; "Non-Intersection", "Intersection", "Non-In…
+## $ crash_month          &lt;chr&gt; "December", "November", "November", "Decemb…
+## $ crash_severity       &lt;chr&gt; "B: Evident Injury", "C: Possible Injury", …
+## $ crash_time           &lt;drtn&gt; 06:10:00, 20:41:00, 18:05:00, 18:34:00, 13…
+## $ crash_type           &lt;chr&gt; "Motorist Overtaking - Undetected Bicyclist…
+## $ crash_year           &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2…
+## $ ambulance_req        &lt;chr&gt; "Yes", "No", "Yes", "Yes", "Yes", "Yes", "Y…
+## $ hit_run              &lt;chr&gt; "No", "Yes", "No", "No", "No", "No", "Yes",…
+## $ light_condition      &lt;chr&gt; "Dark - Roadway Not Lighted", NA, "Dark - R…
+## $ road_character       &lt;chr&gt; "Straight - Level", "Straight - Level", "St…
+## $ road_class           &lt;chr&gt; "State Secondary Route", "Local Street", "U…
+## $ road_condition       &lt;chr&gt; "Dry", "Dry", "Dry", "Water (Standing, Movi…
+## $ road_configuration   &lt;chr&gt; "Two-Way, Not Divided", "Two-Way, Divided, …
+## $ road_defects         &lt;chr&gt; "None", NA, "None", "None", "None", "None",…
+## $ road_feature         &lt;chr&gt; "No Special Feature", "T-Intersection", "No…
+## $ road_surface         &lt;chr&gt; "Coarse Asphalt", "Smooth Asphalt", "Smooth…
+## $ num_bikes_ai         &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+## $ num_bikes_bi         &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+## $ num_bikes_ci         &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+## $ num_bikes_ki         &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+## $ num_bikes_no         &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+## $ num_bikes_to         &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+## $ num_bikes_ui         &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+## $ num_lanes            &lt;chr&gt; "2 lanes", "2 lanes", "2 lanes", "1 lane", …
+## $ num_units            &lt;int&gt; 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2…
+## $ distance_mi_from     &lt;chr&gt; "0", "0", "0", "0", "0", "0", "0", "0", "0"…
+## $ frm_road             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
+## $ rte_invd_cd          &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+## $ towrd_road           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
+## $ geo_point            &lt;chr&gt; "35.3336070056, -77.9955023901", "36.315187…
+## $ geo_shape            &lt;chr&gt; "{\"type\": \"Point\", \"coordinates\": [-7…
 ```
 
 ---
@@ -808,7 +796,7 @@ ncbikecrash %&gt;%
 ```
 
 ```
-## # A tibble: 340 x 67
+## # A tibble: 340 x 66
 ##    object_id city  county region development locality on_road rural_urban
 ##        &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;      
 ##  1      2452 Durh… Durham Piedm… Residential Urban (… &lt;NA&gt;    Urban      
@@ -821,7 +809,7 @@ ncbikecrash %&gt;%
 ##  8      7134 Durh… Durham Piedm… Commercial  Urban (… &lt;NA&gt;    Urban      
 ##  9      1670 Durh… Durham Piedm… Commercial  Urban (… INFINI… Urban      
 ## 10      1773 Durh… Durham Piedm… Residential Urban (… &lt;NA&gt;    Urban      
-## # … with 330 more rows, and 59 more variables: speed_limit &lt;chr&gt;,
+## # … with 330 more rows, and 58 more variables: speed_limit &lt;chr&gt;,
 ## #   traffic_control &lt;chr&gt;, weather &lt;chr&gt;, workzone &lt;chr&gt;, bike_age &lt;chr&gt;,
 ## #   bike_age_group &lt;chr&gt;, bike_alcohol &lt;chr&gt;, bike_alcohol_drugs &lt;chr&gt;,
 ## #   bike_direction &lt;chr&gt;, bike_injury &lt;chr&gt;, bike_position &lt;chr&gt;,
@@ -840,8 +828,7 @@ ncbikecrash %&gt;%
 ## #   num_bikes_ci &lt;int&gt;, num_bikes_ki &lt;int&gt;, num_bikes_no &lt;int&gt;,
 ## #   num_bikes_to &lt;int&gt;, num_bikes_ui &lt;int&gt;, num_lanes &lt;chr&gt;,
 ## #   num_units &lt;int&gt;, distance_mi_from &lt;chr&gt;, frm_road &lt;chr&gt;,
-## #   rte_invd_cd &lt;int&gt;, towrd_road &lt;chr&gt;, geo_point &lt;chr&gt;, geo_shape &lt;chr&gt;,
-## #   driver_alcohol_drugs_simplified &lt;chr&gt;
+## #   rte_invd_cd &lt;int&gt;, towrd_road &lt;chr&gt;, geo_point &lt;chr&gt;, geo_shape &lt;chr&gt;
 ```
 
 ---
@@ -857,14 +844,14 @@ ncbikecrash %&gt;%
 ```
 
 ```
-## # A tibble: 4 x 67
+## # A tibble: 4 x 66
 ##   object_id city  county region development locality on_road rural_urban
 ##       &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;      
 ## 1      4062 Durh… Durham Piedm… Residential Urban (… &lt;NA&gt;    Urban      
 ## 2       414 Durh… Durham Piedm… Residential Urban (… PVA 90… Urban      
 ## 3      3016 Durh… Durham Piedm… Residential Urban (… &lt;NA&gt;    Urban      
 ## 4      1383 Durh… Durham Piedm… Residential Urban (… PVA 62… Urban      
-## # … with 59 more variables: speed_limit &lt;chr&gt;, traffic_control &lt;chr&gt;,
+## # … with 58 more variables: speed_limit &lt;chr&gt;, traffic_control &lt;chr&gt;,
 ## #   weather &lt;chr&gt;, workzone &lt;chr&gt;, bike_age &lt;chr&gt;, bike_age_group &lt;chr&gt;,
 ## #   bike_alcohol &lt;chr&gt;, bike_alcohol_drugs &lt;chr&gt;, bike_direction &lt;chr&gt;,
 ## #   bike_injury &lt;chr&gt;, bike_position &lt;chr&gt;, bike_race &lt;chr&gt;,
@@ -883,7 +870,7 @@ ncbikecrash %&gt;%
 ## #   num_bikes_no &lt;int&gt;, num_bikes_to &lt;int&gt;, num_bikes_ui &lt;int&gt;,
 ## #   num_lanes &lt;chr&gt;, num_units &lt;int&gt;, distance_mi_from &lt;chr&gt;,
 ## #   frm_road &lt;chr&gt;, rte_invd_cd &lt;int&gt;, towrd_road &lt;chr&gt;, geo_point &lt;chr&gt;,
-## #   geo_shape &lt;chr&gt;, driver_alcohol_drugs_simplified &lt;chr&gt;
+## #   geo_shape &lt;chr&gt;
 ```
 
 ---
@@ -932,7 +919,7 @@ ncbikecrash %&gt;%
 ```
 
 ```
-## # A tibble: 7,467 x 66
+## # A tibble: 7,467 x 65
 ##    city  county region development locality on_road rural_urban speed_limit
 ##    &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt;      
 ##  1 None… Wayne  Coast… Farms, Woo… Rural (… SR 1915 Rural       50 - 55  M…
@@ -945,7 +932,7 @@ ncbikecrash %&gt;%
 ##  8 Rale… Wake   Piedm… Commercial  Urban (… PERSON… Urban       30 - 35  M…
 ##  9 Whit… Colum… Coast… Residential Rural (… FLOWER… Urban       30 - 35  M…
 ## 10 New … Craven Coast… Residential Urban (… SUTTON… Urban       20 - 25  M…
-## # … with 7,457 more rows, and 58 more variables: traffic_control &lt;chr&gt;,
+## # … with 7,457 more rows, and 57 more variables: traffic_control &lt;chr&gt;,
 ## #   weather &lt;chr&gt;, workzone &lt;chr&gt;, bike_age &lt;chr&gt;, bike_age_group &lt;chr&gt;,
 ## #   bike_alcohol &lt;chr&gt;, bike_alcohol_drugs &lt;chr&gt;, bike_direction &lt;chr&gt;,
 ## #   bike_injury &lt;chr&gt;, bike_position &lt;chr&gt;, bike_race &lt;chr&gt;,
@@ -964,7 +951,7 @@ ncbikecrash %&gt;%
 ## #   num_bikes_no &lt;int&gt;, num_bikes_to &lt;int&gt;, num_bikes_ui &lt;int&gt;,
 ## #   num_lanes &lt;chr&gt;, num_units &lt;int&gt;, distance_mi_from &lt;chr&gt;,
 ## #   frm_road &lt;chr&gt;, rte_invd_cd &lt;int&gt;, towrd_road &lt;chr&gt;, geo_point &lt;chr&gt;,
-## #   geo_shape &lt;chr&gt;, driver_alcohol_drugs_simplified &lt;chr&gt;
+## #   geo_shape &lt;chr&gt;
 ```
 
 ---
@@ -1006,7 +993,7 @@ ncbikecrash %&gt;%
 ```
 
 ```
-## # A tibble: 5 x 67
+## # A tibble: 5 x 66
 ##   object_id city  county region development locality on_road rural_urban
 ##       &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;      
 ## 1      1686 None… Wayne  Coast… Farms, Woo… Rural (… SR 1915 Rural      
@@ -1014,7 +1001,7 @@ ncbikecrash %&gt;%
 ## 3      1673 None… Linco… Piedm… Farms, Woo… Rural (… US 321  Rural      
 ## 4      1687 Whit… Colum… Coast… Commercial  Urban (… W BURK… Urban      
 ## 5      1653 Wilm… New H… Coast… Residential Urban (… RACINE… Urban      
-## # … with 59 more variables: speed_limit &lt;chr&gt;, traffic_control &lt;chr&gt;,
+## # … with 58 more variables: speed_limit &lt;chr&gt;, traffic_control &lt;chr&gt;,
 ## #   weather &lt;chr&gt;, workzone &lt;chr&gt;, bike_age &lt;chr&gt;, bike_age_group &lt;chr&gt;,
 ## #   bike_alcohol &lt;chr&gt;, bike_alcohol_drugs &lt;chr&gt;, bike_direction &lt;chr&gt;,
 ## #   bike_injury &lt;chr&gt;, bike_position &lt;chr&gt;, bike_race &lt;chr&gt;,
@@ -1033,7 +1020,7 @@ ncbikecrash %&gt;%
 ## #   num_bikes_no &lt;int&gt;, num_bikes_to &lt;int&gt;, num_bikes_ui &lt;int&gt;,
 ## #   num_lanes &lt;chr&gt;, num_units &lt;int&gt;, distance_mi_from &lt;chr&gt;,
 ## #   frm_road &lt;chr&gt;, rte_invd_cd &lt;int&gt;, towrd_road &lt;chr&gt;, geo_point &lt;chr&gt;,
-## #   geo_shape &lt;chr&gt;, driver_alcohol_drugs_simplified &lt;chr&gt;
+## #   geo_shape &lt;chr&gt;
 ```
 
 ---
@@ -1049,7 +1036,7 @@ ncbikecrash %&gt;%
 ```
 
 ```
-## # A tibble: 5 x 67
+## # A tibble: 5 x 66
 ##   object_id city  county region development locality on_road rural_urban
 ##       &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;      
 ## 1      6989 High… Guilf… Piedm… Residential Urban (… &lt;NA&gt;    Urban      
@@ -1057,7 +1044,7 @@ ncbikecrash %&gt;%
 ## 3      6995 Kins… Lenoir Coast… Commercial  Urban (… &lt;NA&gt;    Urban      
 ## 4      6998 Faye… Cumbe… Coast… Residential Urban (… &lt;NA&gt;    Urban      
 ## 5      7000 None… Onslow Coast… Farms, Woo… Rural (… &lt;NA&gt;    Rural      
-## # … with 59 more variables: speed_limit &lt;chr&gt;, traffic_control &lt;chr&gt;,
+## # … with 58 more variables: speed_limit &lt;chr&gt;, traffic_control &lt;chr&gt;,
 ## #   weather &lt;chr&gt;, workzone &lt;chr&gt;, bike_age &lt;chr&gt;, bike_age_group &lt;chr&gt;,
 ## #   bike_alcohol &lt;chr&gt;, bike_alcohol_drugs &lt;chr&gt;, bike_direction &lt;chr&gt;,
 ## #   bike_injury &lt;chr&gt;, bike_position &lt;chr&gt;, bike_race &lt;chr&gt;,
@@ -1076,7 +1063,7 @@ ncbikecrash %&gt;%
 ## #   num_bikes_no &lt;int&gt;, num_bikes_to &lt;int&gt;, num_bikes_ui &lt;int&gt;,
 ## #   num_lanes &lt;chr&gt;, num_units &lt;int&gt;, distance_mi_from &lt;chr&gt;,
 ## #   frm_road &lt;chr&gt;, rte_invd_cd &lt;int&gt;, towrd_road &lt;chr&gt;, geo_point &lt;chr&gt;,
-## #   geo_shape &lt;chr&gt;, driver_alcohol_drugs_simplified &lt;chr&gt;
+## #   geo_shape &lt;chr&gt;
 ```
 
 ---
@@ -1131,7 +1118,7 @@ dim(ncbikecrash_n5)
 ```
 
 ```
-## [1]  5 67
+## [1]  5 66
 ```
 
 - `sample_frac`: randomly sample 20% of observations
@@ -1144,7 +1131,7 @@ dim(ncbikecrash_perc20)
 ```
 
 ```
-## [1] 1493   67
+## [1] 1493   66
 ```
 
 ---
@@ -1790,8 +1777,8 @@ A survey asked respondents their name and number of cats. The instructions said 
 cat_lovers &lt;- read_csv("../data/cat-lovers.csv")
 ```
 
-<div id="htmlwidget-530c66bb6a32b3e71355" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-530c66bb6a32b3e71355">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60"],["Bernice Warren","Woodrow Stone","Willie Bass","Tyrone Estrada","Alex Daniels","Jane Bates","Latoya Simpson","Darin Woods","Agnes Cobb","Tabitha Grant","Perry Cross","Wanda Silva","Alicia Sims","Emily Logan","Woodrow Elliott","Brent Copeland","Pedro Carlson","Patsy Luna","Brett Robbins","Oliver George","Calvin Perry","Lora Gutierrez","Charlotte Sparks","Earl Mack","Leslie Wade","Santiago Barker","Jose Bell","Lynda Smith","Bradford Marshall","Irving Miller","Caroline Simpson","Frances Welch","Melba Jenkins","Veronica Morales","Juanita Cunningham","Maurice Howard","Teri Pierce","Phil Franklin","Jan Zimmerman","Leslie Price","Bessie Patterson","Ethel Wolfe","Naomi Wright","Sadie Frank","Lonnie Cannon","Tony Garcia","Darla Newton","Ginger Clark","Lionel Campbell","Florence Klein","Harriet Leonard","Terrence Harrington","Travis Garner","Doug Bass","Pat Norris","Dawn Young","Shari Alvarez","Tamara Robinson","Megan Morgan","Kara Obrien"],["0","0","1","3","3","2","1","1","0","0","0","0","1","3","3","2","1","1","0","0","1","1","0","0","4","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","1","3","3","2","1","1.5 - honestly I think one of my cats is half human","0","0","0","0","1","three","1","1","1","0","0","2"],["left","left","left","left","left","left","left","left","left","left","left","left","left","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","ambidextrous","ambidextrous","ambidextrous","ambidextrous","ambidextrous"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>name<\/th>\n      <th>number_of_cats<\/th>\n      <th>handedness<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7ffbf7751f8be2e8be4f" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7ffbf7751f8be2e8be4f">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60"],["Bernice Warren","Woodrow Stone","Willie Bass","Tyrone Estrada","Alex Daniels","Jane Bates","Latoya Simpson","Darin Woods","Agnes Cobb","Tabitha Grant","Perry Cross","Wanda Silva","Alicia Sims","Emily Logan","Woodrow Elliott","Brent Copeland","Pedro Carlson","Patsy Luna","Brett Robbins","Oliver George","Calvin Perry","Lora Gutierrez","Charlotte Sparks","Earl Mack","Leslie Wade","Santiago Barker","Jose Bell","Lynda Smith","Bradford Marshall","Irving Miller","Caroline Simpson","Frances Welch","Melba Jenkins","Veronica Morales","Juanita Cunningham","Maurice Howard","Teri Pierce","Phil Franklin","Jan Zimmerman","Leslie Price","Bessie Patterson","Ethel Wolfe","Naomi Wright","Sadie Frank","Lonnie Cannon","Tony Garcia","Darla Newton","Ginger Clark","Lionel Campbell","Florence Klein","Harriet Leonard","Terrence Harrington","Travis Garner","Doug Bass","Pat Norris","Dawn Young","Shari Alvarez","Tamara Robinson","Megan Morgan","Kara Obrien"],["0","0","1","3","3","2","1","1","0","0","0","0","1","3","3","2","1","1","0","0","1","1","0","0","4","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","1","3","3","2","1","1.5 - honestly I think one of my cats is half human","0","0","0","0","1","three","1","1","1","0","0","2"],["left","left","left","left","left","left","left","left","left","left","left","left","left","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","ambidextrous","ambidextrous","ambidextrous","ambidextrous","ambidextrous"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>name<\/th>\n      <th>number_of_cats<\/th>\n      <th>handedness<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
@@ -1864,8 +1851,8 @@ glimpse(cat_lovers)
 ## Let's take another look
 
 .small[
-<div id="htmlwidget-0f8e6e874b779c7bccfb" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0f8e6e874b779c7bccfb">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60"],["Bernice Warren","Woodrow Stone","Willie Bass","Tyrone Estrada","Alex Daniels","Jane Bates","Latoya Simpson","Darin Woods","Agnes Cobb","Tabitha Grant","Perry Cross","Wanda Silva","Alicia Sims","Emily Logan","Woodrow Elliott","Brent Copeland","Pedro Carlson","Patsy Luna","Brett Robbins","Oliver George","Calvin Perry","Lora Gutierrez","Charlotte Sparks","Earl Mack","Leslie Wade","Santiago Barker","Jose Bell","Lynda Smith","Bradford Marshall","Irving Miller","Caroline Simpson","Frances Welch","Melba Jenkins","Veronica Morales","Juanita Cunningham","Maurice Howard","Teri Pierce","Phil Franklin","Jan Zimmerman","Leslie Price","Bessie Patterson","Ethel Wolfe","Naomi Wright","Sadie Frank","Lonnie Cannon","Tony Garcia","Darla Newton","Ginger Clark","Lionel Campbell","Florence Klein","Harriet Leonard","Terrence Harrington","Travis Garner","Doug Bass","Pat Norris","Dawn Young","Shari Alvarez","Tamara Robinson","Megan Morgan","Kara Obrien"],["0","0","1","3","3","2","1","1","0","0","0","0","1","3","3","2","1","1","0","0","1","1","0","0","4","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","1","3","3","2","1","1.5 - honestly I think one of my cats is half human","0","0","0","0","1","three","1","1","1","0","0","2"],["left","left","left","left","left","left","left","left","left","left","left","left","left","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","ambidextrous","ambidextrous","ambidextrous","ambidextrous","ambidextrous"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>name<\/th>\n      <th>number_of_cats<\/th>\n      <th>handedness<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0bced539feee0b1b809b" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0bced539feee0b1b809b">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60"],["Bernice Warren","Woodrow Stone","Willie Bass","Tyrone Estrada","Alex Daniels","Jane Bates","Latoya Simpson","Darin Woods","Agnes Cobb","Tabitha Grant","Perry Cross","Wanda Silva","Alicia Sims","Emily Logan","Woodrow Elliott","Brent Copeland","Pedro Carlson","Patsy Luna","Brett Robbins","Oliver George","Calvin Perry","Lora Gutierrez","Charlotte Sparks","Earl Mack","Leslie Wade","Santiago Barker","Jose Bell","Lynda Smith","Bradford Marshall","Irving Miller","Caroline Simpson","Frances Welch","Melba Jenkins","Veronica Morales","Juanita Cunningham","Maurice Howard","Teri Pierce","Phil Franklin","Jan Zimmerman","Leslie Price","Bessie Patterson","Ethel Wolfe","Naomi Wright","Sadie Frank","Lonnie Cannon","Tony Garcia","Darla Newton","Ginger Clark","Lionel Campbell","Florence Klein","Harriet Leonard","Terrence Harrington","Travis Garner","Doug Bass","Pat Norris","Dawn Young","Shari Alvarez","Tamara Robinson","Megan Morgan","Kara Obrien"],["0","0","1","3","3","2","1","1","0","0","0","0","1","3","3","2","1","1","0","0","1","1","0","0","4","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","1","3","3","2","1","1.5 - honestly I think one of my cats is half human","0","0","0","0","1","three","1","1","1","0","0","2"],["left","left","left","left","left","left","left","left","left","left","left","left","left","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","ambidextrous","ambidextrous","ambidextrous","ambidextrous","ambidextrous"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>name<\/th>\n      <th>number_of_cats<\/th>\n      <th>handedness<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
