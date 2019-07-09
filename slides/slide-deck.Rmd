@@ -594,11 +594,11 @@ class: center, middle
 The dataset is in the **dsbox** package:
 
 - github packages require special install commands
+
 - the **remotes** package is automatically installed with **devtools**
 
 ```{r load-data, eval=FALSE}
 
-install.packages("devtools")
 remotes::install_github("rstudio-education/dsbox")
 
 library(dsbox)
@@ -623,7 +623,11 @@ and see detailed descriptions with `?ncbikecrash`.
 
 - In the Environment, after loading with `data(ncbikecrash)`, and click on the 
 name of the data frame to view it in the data viewer
+
 - Use the `glimpse` function to take a peek
+
+--
+
 
 ```{r}
 glimpse(ncbikecrash)
