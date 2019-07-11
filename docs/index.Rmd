@@ -41,7 +41,7 @@ library(DT)
 ...but I'll gladly help you with otherwise:
 
 - Advanced data wrangling
-- Advanced visualization
+- Detailed data visualization
 - Data modelling
 - Handling spatial data
 
@@ -49,7 +49,7 @@ library(DT)
 
 class: center 
 
-## What data projects look like
+## The data analysis cycle
 
 
 .center[
@@ -131,7 +131,7 @@ Long-term goals:
 
 ## From manual tasking...
 
-```{r fig.align="center", out.width = 1000, out.height= 500, echo=FALSE}
+```{r fig.align="center", out.width = 550, out.height= 500, echo=FALSE}
 knitr::include_graphics("img/manual-datapull.png")
 ```
 
@@ -139,7 +139,7 @@ knitr::include_graphics("img/manual-datapull.png")
 
 ## ... to reproducible code
 
-```{r fig.align="center", out.width = 1000, out.height= 500, echo=FALSE}
+```{r fig.align="center", out.width = 600, out.height= 500, echo=FALSE}
 knitr::include_graphics("img/script-datapull.png")
 ```
 
@@ -171,9 +171,10 @@ class: center, middle
 
 - R is a statistical programming language
 
-- Don't be discouraged by the word _programming_
+- Don't be discouraged by the word _programming_; R is first and foremost for data analysis  
 
-- R is first and foremost for data analysis
+--
+
 
 >_You must use a computer to do data science; you cannot do it in your head, or with pencil and paper._
 >
@@ -207,11 +208,17 @@ knitr::include_graphics("img/engine-dashboard.png")
 
 ---
 
-## Let's take a tour - R / RStudio
+## `r fontawesome::fa("cloud")`  Let's take a tour - R / RStudio
 
 .center[
-![](../img/demo.png)
+![](/img/demo.png)
 ]
+
+Follow this link and log in with your google account 
+
+INSERT RSTUDIO CLOUD
+
+--
 
 Concepts introduced:
 
@@ -295,21 +302,20 @@ class: center, middle
 
 ---
 
-## Let's take a tour - R Markdown
+## `r fontawesome::fa("laptop")` Let's take a tour - R Markdown
 
 
-.center[
-![](../img/demo.png)
-]
+Go to RStudio Cloud and open the application exercise (AE-02).
 
 Concepts introduced:
 
 - Knitting documents
+
 - R Markdown and (some) R syntax
 
 ---
 
-## `r fontawesome::fa("laptop")`  Bechdel Test 
+## `r fontawesome::fa("code")` Bechdel Test 
 
 .question[
 What is the Bechdel test?
@@ -321,20 +327,19 @@ The Bechdel test asks whether a work of fiction features at least two women who 
 
 --
 
-- Go to RStudio Cloud and open the application exercise (AE-02).
 - Knit the R Markdown document.
 
 ---
 
-## Other things you can make in R markdown
+## Other things you can make in R Markdown
 
-`r fontawesome::fa("file-powerpoint")` These slides
+`r fontawesome::fa("file-powerpoint")` This presentation was written in R Markdown
 `r fontawesome::fa("file")` [HTML resume](https://iecastro.github.io/web-resume)
-`r fontawesome::fa("link")` [Web link](https://iecastro.github.io/blog/2018-09-13/ndi-dist-prof.html)
+`r fontawesome::fa("link")` [Blog / Website](https://iecastro.github.io/blog/2018-09-13/ndi-dist-prof.html)
 
 --
 
-... ok, enough self promotion `r emo::ji("office")`
+... ok, enough self promotion `r emo::ji("man_office_worker")`
 
 ---
 ## R Markdown help
@@ -369,7 +374,10 @@ x * 3
 All looks good, eh?
 ]
 
-- Then, add the following chunk in your R Markdown document
+--
+
+- Then, add the following chunk in your R Markdown document and knit it
+
 ```{r eval = FALSE}
 x * 3
 ```
@@ -382,6 +390,7 @@ What happens? Why the error?
 ## How will we use R Markdown?
 
 - Workshop tutorials are in R Markdown documents
+
 - You'll always have a template R Markdown document to start with
 
 ---
@@ -429,15 +438,10 @@ knitr::include_graphics("img/phd_comics_vc.gif")
 
 - Git is a version control system -- like “Track Changes” features from Microsoft Word on steroids. GitHub is the home for your Git-based projects on the internet -- like DropBox but much, much better).
 
---
-
 - There are millions of git commands -- ok, that's an exaggeration, but there are a lot of them -- and very few people know them all. 99% of the time you will use git to add, commit, push, and pull.
-
---
 
 - __This is outside the scope of this workshop and I've found difficult to set up in a VA computer.__
 
---
 - There is a great resource for working with git and R: [happygitwithr.com](http://happygitwithr.com/).
 
 ---
@@ -464,17 +468,16 @@ class: center, middle
 --
 
 .pull-left[
-**Characteristics of tidy data:**
+**Characteristics of tidy data:**  `r emo::ji("smile")`
 
 - Each variable forms a column.
 - Each observation forms a row.
 - Each type of observational unit forms a table.
 ]
 
---
 
 .pull-right[
-**Characteristics of untidy data:**
+**Characteristics of untidy data:**  `r emo::ji("frowning")`
 
 !@#$%^&*()
 ]
@@ -511,6 +514,7 @@ starwars %>%
 ```
 ]
 
+
 .pull-right[
 ```{r echo=FALSE}
 starwars %>%
@@ -533,12 +537,18 @@ class: center, middle
 The pipe operator is implemented in the package **magrittr**, it's pronounced 
 "and then".
 
+
 .pull-left[
 ![pipe](img//magritte.jpg)
 ]
 .pull-right[
 ![magrittr](img//magrittr.jpg)
 ]
+
+.footnote[
+➥ Vignette: [magrittr](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html)
+]
+
 
 ---
 
@@ -584,11 +594,11 @@ class: center, middle
 The dataset is in the **dsbox** package:
 
 - github packages require special install commands
+
 - the **remotes** package is automatically installed with **devtools**
 
 ```{r load-data, eval=FALSE}
 
-install.packages("devtools")
 remotes::install_github("rstudio-education/dsbox")
 
 library(dsbox)
@@ -613,7 +623,11 @@ and see detailed descriptions with `?ncbikecrash`.
 
 - In the Environment, after loading with `data(ncbikecrash)`, and click on the 
 name of the data frame to view it in the data viewer
+
 - Use the `glimpse` function to take a peek
+
+--
+
 
 ```{r}
 glimpse(ncbikecrash)
