@@ -3,7 +3,7 @@
   <head>
     <title>Welcome</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Ivan Castro   VISN 2 CIH - Syracuse" />
+    <meta name="author" content="Ivan Castro   VISN2 Center for Integrated Healthcare" />
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
     <script src="libs/jquery-1.12.4/jquery.min.js"></script>
@@ -22,7 +22,7 @@ class: center, middle, inverse, title-slide
 
 # Welcome
 ## Brief intro to R <br> 🙌
-### Ivan Castro <br /> VISN 2 CIH - Syracuse
+### Ivan Castro <br /> VISN2 Center for Integrated Healthcare
 
 ---
 
@@ -40,6 +40,7 @@ class: center, middle, inverse, title-slide
 - Given our roles, we will focus on:
 
   1. How to start interacting with R  
+  
   2. How to wrangle data in R  
 
 --
@@ -55,6 +56,12 @@ class: center, middle, inverse, title-slide
 
 ---
 
+class: center, middle
+
+# What is Data Wrangling?
+
+---
+
 class: center 
 
 ## The data analysis cycle
@@ -65,8 +72,6 @@ class: center
 &gt;
 &gt; Bryan &amp; Wickham ([2017](https://www.tandfonline.com/doi/full/10.1080/10618600.2017.1389743))  
 ]
-
---
 
 .center[
 ![](https://github.com/hadley/r4ds/raw/master/diagrams/data-science-wrangle.png)
@@ -84,7 +89,7 @@ class: center
 
 - Trained in biostats
 
-- Enjoy working with [messy data](https://brohrer.github.io/data_science_archetypes.html)
+- Enjoy the challenge of wrangling [messy data](https://brohrer.github.io/data_science_archetypes.html)
 
 
 .center[
@@ -107,6 +112,17 @@ class: right, middle
 class: title-slide
 
 # Meet the toolkit &lt;br&gt; ⚒
+
+---
+
+## Toolkit
+
+![toolkit](img/toolkit.png)
+
+- Scriptability `\(\rightarrow\)` R
+- Literate programming (code, narrative, output in one place) `\(\rightarrow\)` R Markdown
+- Version control `\(\rightarrow\)` Git / GitHub
+
 
 ---
 class: center, middle
@@ -155,16 +171,6 @@ Long-term goals:
 
 ---
 
-## Toolkit
-
-![toolkit](img/toolkit.png)
-
-- Scriptability `\(\rightarrow\)` R
-- Literate programming (code, narrative, output in one place) `\(\rightarrow\)` R Markdown
-- Version control `\(\rightarrow\)` Git / GitHub
-
----
-
 class: center, middle
 
 # R and RStudio
@@ -175,12 +181,11 @@ class: center, middle
 
 - R is a statistical programming language
 
-- Don't be discouraged by the word _programming_; R is first and foremost for data analysis  
+- But why learn programming?
 
 --
 
-
-&gt;_You must use a computer to do data science; you cannot do it in your head, or with pencil and paper._
+&gt;You must use a computer to do data science; you cannot do it in your head, or with pencil and paper.
 &gt;
 &gt;Hadley Wickham
 &gt;
@@ -188,6 +193,9 @@ class: center, middle
 .center[
 ![](https://github.com/hadley/r4ds/raw/master/diagrams/data-science-program.png)
 ]
+
+
+- Don't be discouraged by the word _programming_; R is first and foremost for data analysis  
 
 .footnote[
 ➥ Source: [R for Data Science](https://r4ds.had.co.nz/)
@@ -216,9 +224,10 @@ class: center, middle
 ![](/img/demo.png)
 ]
 
-Follow this link and log in with your google account 
+Follow this link and log in with your google account: 
 
-INSERT RSTUDIO CLOUD
+https://rstudio.cloud/project/395951
+
 
 --
 
@@ -287,6 +296,7 @@ install.packages(c("tidyverse", "devtools", "datasauRus", "fivethirtyeight", "ja
 ]
 
 - The tidyverse is an opinionated collection of R packages designed for data science. 
+
 - All packages share an underlying philosophy and a common grammar. 
 ]
 
@@ -302,7 +312,9 @@ class: center, middle
 ## R Markdown
 
 - Fully reproducible reports -- each time you knit the analysis is ran from the beginning
+
 - Simple markdown syntax for text
+
 - Code goes in chunks, defined by three backticks, narrative goes outside of chunks
 
 ---
@@ -310,7 +322,9 @@ class: center, middle
 ## &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 640 512"&gt;&lt;path d="M512 64v256H128V64h384m16-64H112C85.5 0 64 21.5 64 48v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm100 416H389.5c-3 0-5.5 2.1-5.9 5.1C381.2 436.3 368 448 352 448h-64c-16 0-29.2-11.7-31.6-26.9-.5-2.9-3-5.1-5.9-5.1H12c-6.6 0-12 5.4-12 12v36c0 26.5 21.5 48 48 48h544c26.5 0 48-21.5 48-48v-36c0-6.6-5.4-12-12-12z"/&gt;&lt;/svg&gt; Let's take a tour - R Markdown
 
 
-Go to RStudio Cloud and open the application exercise (AE-02).
+Go to RStudio Cloud and open the application exercise Bechdel.
+
+    ~/appex/ae-bechdel.Rmd
 
 Concepts introduced:
 
@@ -394,14 +408,6 @@ What happens? Why the error?
 
 ---
 
-## How will we use R Markdown?
-
-- Workshop tutorials are in R Markdown documents
-
-- You'll always have a template R Markdown document to start with
-
----
-
 class: center, middle
 
 # Git and GitHub
@@ -411,7 +417,8 @@ class: center, middle
 ## Version control
 
 - GitHub as a platform for collaboration
-- It's actually desiged for version control
+
+- It's actually designed for version control
 
 ---
 
@@ -439,9 +446,7 @@ with human readable messages
 
 - Git is a version control system -- like “Track Changes” features from Microsoft Word on steroids. GitHub is the home for your Git-based projects on the internet -- like DropBox but much, much better).
 
-- There are millions of git commands -- ok, that's an exaggeration, but there are a lot of them -- and very few people know them all. 99% of the time you will use git to add, commit, push, and pull.
-
-- __This is outside the scope of this workshop and I've found difficult to set up in a VA computer.__
+- __This is outside the scope of this workshop.__
 
 - There is a great resource for working with git and R: [happygitwithr.com](http://happygitwithr.com/).
 
@@ -454,6 +459,7 @@ class: title-slide
 ---
 
 class: center, middle
+name: tidy
 
 # Tidy data
 
@@ -483,13 +489,6 @@ class: center, middle
 !@#$%^&amp;*()
 ]
 
----
-## Tidy data
-
-&gt;Like families, tidy datasets are all alike but every messy dataset is messy in its own way.
-&gt;
-&gt; Hadley Wickham
-
 --
 
 
@@ -498,6 +497,14 @@ class: center, middle
 .footnote[
 ➥ Source: [R for Data Science](https://r4ds.had.co.nz/)
 ]
+
+---
+
+class: middle
+
+&gt;Like families, tidy datasets are all alike but every messy dataset is messy in its own way.
+&gt;
+&gt;Hadley Wickham
 
 
 ---
@@ -576,11 +583,17 @@ The pipe operator is implemented in the package **magrittr**, it's pronounced
 
 - You can think about the following sequence of actions - find key, 
 unlock car, start car, drive to school, park.
+
+--
+
 - Expressed as a set of nested functions in R pseudocode this would look like:
 
 ```r
 park(drive(start_car(find("keys")), to = "campus"))
 ```
+
+--
+
 - Writing it out using pipes give it a more natural (and easier to read) 
 structure:
 
@@ -617,6 +630,7 @@ starwars %&gt;%
 ---
 
 class: center, middle
+name: wrangle
 
 # Data wrangling
 
@@ -792,8 +806,11 @@ glimpse(ncbikecrash)
 ## **dplyr** rules for functions
 
 - First argument is *always* a data frame
+
 - Subsequent arguments say what to do with that data frame
+
 - Always return a data frame
+
 - Don't modify in place
 
 ---
@@ -801,6 +818,7 @@ glimpse(ncbikecrash)
 ## A note on piping and layering
 
 - The `%&gt;%` operator in **dplyr** functions is called the pipe operator. This means you "pipe" the output of the previous line of code as the first input of the next line of code.
+
 - The `+` operator in **ggplot2** functions is used for "layering". This means you create the plot in layers, separated by `+`.
 
 ---
@@ -896,6 +914,7 @@ ncbikecrash %&gt;%
 ---
 
 ## Logical operators in R
+
 
 operator    | definition                   || operator     | definition
 ------------|------------------------------||--------------|----------------
@@ -1312,14 +1331,18 @@ ncbikecrash %&gt;%
 
 ---
 
-## &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 640 512"&gt;&lt;path d="M512 64v256H128V64h384m16-64H112C85.5 0 64 21.5 64 48v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm100 416H389.5c-3 0-5.5 2.1-5.9 5.1C381.2 436.3 368 448 352 448h-64c-16 0-29.2-11.7-31.6-26.9-.5-2.9-3-5.1-5.9-5.1H12c-6.6 0-12 5.4-12 12v36c0 26.5 21.5 48 48 48h544c26.5 0 48-21.5 48-48v-36c0-6.6-5.4-12-12-12z"/&gt;&lt;/svg&gt;  AE 04 - NC bike crashes
+## &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 640 512"&gt;&lt;path d="M512 64v256H128V64h384m16-64H112C85.5 0 64 21.5 64 48v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm100 416H389.5c-3 0-5.5 2.1-5.9 5.1C381.2 436.3 368 448 352 448h-64c-16 0-29.2-11.7-31.6-26.9-.5-2.9-3-5.1-5.9-5.1H12c-6.6 0-12 5.4-12 12v36c0 26.5 21.5 48 48 48h544c26.5 0 48-21.5 48-48v-36c0-6.6-5.4-12-12-12z"/&gt;&lt;/svg&gt;  AE - NC bike crashes
 
-- Go to the cloud project and open this application exercise
+- Go to the cloud project and open application exercise NC bike crashes
+
+    ~appex/ae-ncbikecrashes.Rmd
+    
 - For each question you work on, set the `eval` chunk option to `TRUE` and knit
 
 ---
 
 class: title-slide
+name: coding
 
 # Coding style &lt;br&gt; 🤵
 
@@ -1333,11 +1356,12 @@ class: center, middle
 
 ## Style guide
 
-&gt;"Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread."
+&gt;Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread.
 &gt;
 &gt;Hadley Wickham
 
 - Style guide for this course is based on the Tidyverse style guide: http://style.tidyverse.org/
+
 - There's more to it than what we'll cover today, but we'll mention more as we introduce more functionality, and do a recap later in the semester
 
 ---
@@ -1452,6 +1476,7 @@ ggplot(diamonds, mapping = aes(x = price)) +
 ---
 
 class: title-slide
+name: types
 
 # Data classes and types + Recoding &lt;br&gt; 💽
 
@@ -1789,6 +1814,10 @@ What is the type of the following vectors? Explain why they have that type.
 
 ## Example: Cat lovers
 
+Go to RStudio Cloud and open the application exercise Cat Lovers.
+
+    ~/appex/ae-catlovers.Rmd
+    
 A survey asked respondents their name and number of cats. The instructions said to enter the number of cats as a numerical value.
 
 .small[
@@ -1797,8 +1826,8 @@ A survey asked respondents their name and number of cats. The instructions said 
 cat_lovers &lt;- read_csv("../data/cat-lovers.csv")
 ```
 
-<div id="htmlwidget-34d7880451b6b2615bd8" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-34d7880451b6b2615bd8">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60"],["Bernice Warren","Woodrow Stone","Willie Bass","Tyrone Estrada","Alex Daniels","Jane Bates","Latoya Simpson","Darin Woods","Agnes Cobb","Tabitha Grant","Perry Cross","Wanda Silva","Alicia Sims","Emily Logan","Woodrow Elliott","Brent Copeland","Pedro Carlson","Patsy Luna","Brett Robbins","Oliver George","Calvin Perry","Lora Gutierrez","Charlotte Sparks","Earl Mack","Leslie Wade","Santiago Barker","Jose Bell","Lynda Smith","Bradford Marshall","Irving Miller","Caroline Simpson","Frances Welch","Melba Jenkins","Veronica Morales","Juanita Cunningham","Maurice Howard","Teri Pierce","Phil Franklin","Jan Zimmerman","Leslie Price","Bessie Patterson","Ethel Wolfe","Naomi Wright","Sadie Frank","Lonnie Cannon","Tony Garcia","Darla Newton","Ginger Clark","Lionel Campbell","Florence Klein","Harriet Leonard","Terrence Harrington","Travis Garner","Doug Bass","Pat Norris","Dawn Young","Shari Alvarez","Tamara Robinson","Megan Morgan","Kara Obrien"],["0","0","1","3","3","2","1","1","0","0","0","0","1","3","3","2","1","1","0","0","1","1","0","0","4","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","1","3","3","2","1","1.5 - honestly I think one of my cats is half human","0","0","0","0","1","three","1","1","1","0","0","2"],["left","left","left","left","left","left","left","left","left","left","left","left","left","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","ambidextrous","ambidextrous","ambidextrous","ambidextrous","ambidextrous"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>name<\/th>\n      <th>number_of_cats<\/th>\n      <th>handedness<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-71e6e357def8046de947" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-71e6e357def8046de947">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60"],["Bernice Warren","Woodrow Stone","Willie Bass","Tyrone Estrada","Alex Daniels","Jane Bates","Latoya Simpson","Darin Woods","Agnes Cobb","Tabitha Grant","Perry Cross","Wanda Silva","Alicia Sims","Emily Logan","Woodrow Elliott","Brent Copeland","Pedro Carlson","Patsy Luna","Brett Robbins","Oliver George","Calvin Perry","Lora Gutierrez","Charlotte Sparks","Earl Mack","Leslie Wade","Santiago Barker","Jose Bell","Lynda Smith","Bradford Marshall","Irving Miller","Caroline Simpson","Frances Welch","Melba Jenkins","Veronica Morales","Juanita Cunningham","Maurice Howard","Teri Pierce","Phil Franklin","Jan Zimmerman","Leslie Price","Bessie Patterson","Ethel Wolfe","Naomi Wright","Sadie Frank","Lonnie Cannon","Tony Garcia","Darla Newton","Ginger Clark","Lionel Campbell","Florence Klein","Harriet Leonard","Terrence Harrington","Travis Garner","Doug Bass","Pat Norris","Dawn Young","Shari Alvarez","Tamara Robinson","Megan Morgan","Kara Obrien"],["0","0","1","3","3","2","1","1","0","0","0","0","1","3","3","2","1","1","0","0","1","1","0","0","4","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","1","3","3","2","1","1.5 - honestly I think one of my cats is half human","0","0","0","0","1","three","1","1","1","0","0","2"],["left","left","left","left","left","left","left","left","left","left","left","left","left","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","ambidextrous","ambidextrous","ambidextrous","ambidextrous","ambidextrous"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>name<\/th>\n      <th>number_of_cats<\/th>\n      <th>handedness<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
@@ -1871,8 +1900,8 @@ glimpse(cat_lovers)
 ## Let's take another look
 
 .small[
-<div id="htmlwidget-289535a41fdb80f99390" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-289535a41fdb80f99390">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60"],["Bernice Warren","Woodrow Stone","Willie Bass","Tyrone Estrada","Alex Daniels","Jane Bates","Latoya Simpson","Darin Woods","Agnes Cobb","Tabitha Grant","Perry Cross","Wanda Silva","Alicia Sims","Emily Logan","Woodrow Elliott","Brent Copeland","Pedro Carlson","Patsy Luna","Brett Robbins","Oliver George","Calvin Perry","Lora Gutierrez","Charlotte Sparks","Earl Mack","Leslie Wade","Santiago Barker","Jose Bell","Lynda Smith","Bradford Marshall","Irving Miller","Caroline Simpson","Frances Welch","Melba Jenkins","Veronica Morales","Juanita Cunningham","Maurice Howard","Teri Pierce","Phil Franklin","Jan Zimmerman","Leslie Price","Bessie Patterson","Ethel Wolfe","Naomi Wright","Sadie Frank","Lonnie Cannon","Tony Garcia","Darla Newton","Ginger Clark","Lionel Campbell","Florence Klein","Harriet Leonard","Terrence Harrington","Travis Garner","Doug Bass","Pat Norris","Dawn Young","Shari Alvarez","Tamara Robinson","Megan Morgan","Kara Obrien"],["0","0","1","3","3","2","1","1","0","0","0","0","1","3","3","2","1","1","0","0","1","1","0","0","4","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","1","3","3","2","1","1.5 - honestly I think one of my cats is half human","0","0","0","0","1","three","1","1","1","0","0","2"],["left","left","left","left","left","left","left","left","left","left","left","left","left","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","ambidextrous","ambidextrous","ambidextrous","ambidextrous","ambidextrous"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>name<\/th>\n      <th>number_of_cats<\/th>\n      <th>handedness<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-f9d57a6896229477b1db" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f9d57a6896229477b1db">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60"],["Bernice Warren","Woodrow Stone","Willie Bass","Tyrone Estrada","Alex Daniels","Jane Bates","Latoya Simpson","Darin Woods","Agnes Cobb","Tabitha Grant","Perry Cross","Wanda Silva","Alicia Sims","Emily Logan","Woodrow Elliott","Brent Copeland","Pedro Carlson","Patsy Luna","Brett Robbins","Oliver George","Calvin Perry","Lora Gutierrez","Charlotte Sparks","Earl Mack","Leslie Wade","Santiago Barker","Jose Bell","Lynda Smith","Bradford Marshall","Irving Miller","Caroline Simpson","Frances Welch","Melba Jenkins","Veronica Morales","Juanita Cunningham","Maurice Howard","Teri Pierce","Phil Franklin","Jan Zimmerman","Leslie Price","Bessie Patterson","Ethel Wolfe","Naomi Wright","Sadie Frank","Lonnie Cannon","Tony Garcia","Darla Newton","Ginger Clark","Lionel Campbell","Florence Klein","Harriet Leonard","Terrence Harrington","Travis Garner","Doug Bass","Pat Norris","Dawn Young","Shari Alvarez","Tamara Robinson","Megan Morgan","Kara Obrien"],["0","0","1","3","3","2","1","1","0","0","0","0","1","3","3","2","1","1","0","0","1","1","0","0","4","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","1","3","3","2","1","1.5 - honestly I think one of my cats is half human","0","0","0","0","1","three","1","1","1","0","0","2"],["left","left","left","left","left","left","left","left","left","left","left","left","left","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","right","ambidextrous","ambidextrous","ambidextrous","ambidextrous","ambidextrous"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>name<\/th>\n      <th>number_of_cats<\/th>\n      <th>handedness<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
@@ -1949,6 +1978,7 @@ cat_lovers &lt;- cat_lovers %&gt;%
 ## Moral of the story
 
 - If your data does not behave how you expect it to, type coercion upon reading in the data might be the reason.
+
 - Go in and investigate your data, apply the fix, *save your data*, live happily ever after.
 
 ---
@@ -2024,6 +2054,12 @@ y[[2]]
 
 class: center, middle
 
+# Review on your own
+
+---
+class: center, middle
+name: datasets
+
 # Data "set"
 
 ---
@@ -2031,9 +2067,11 @@ class: center, middle
 ## Data "sets" in R
 
 - "set" is in quotation marks because it is not a formal data class
+
 - A tidy data "set" can be one of the following types:
     + `tibble`
     + `data.frame`
+    
 - We'll often work with `tibble`s:
     + `readr` package (e.g. `read_csv` function) loads data as a `tibble` by default
     + `tibble`s are part of the tidyverse, so they work well with other packages we are using
@@ -2044,7 +2082,9 @@ class: center, middle
 ## Data frames
 
 - A data frame is the most commonly used data structure in R, they are just a list of equal length vectors (usually atomic, but you can use generic as well). Each vector is treated as a column and elements of the vectors as rows.
+
 - A tibble is a type of data frame that ... makes your life (i.e. data analysis) easier.
+
 - Most often a data frame will be constructed by reading in from a file, but we can also create them from scratch.
 
 
@@ -2294,6 +2334,7 @@ ggplot(cat_lovers, mapping = aes(x = handedness)) +
 ]
 
 - R uses factors to handle categorical variables, variables that have a fixed and known set of possible values. Historically, factors were much easier to work with than character vectors, so many base R functions automatically convert character vectors to factors.
+
 - However, factors are still useful when you have true categorical data, and when you want to override the ordering of character vectors to improve display. The goal of the forcats package is to provide a suite of useful tools that solve common problems with factors.
 
 .footnote[
@@ -2317,6 +2358,48 @@ Source: [forcats.tidyverse.org](http://forcats.tidyverse.org/)
     + If you are absolutely sure of a data class, overwrite it in your
     tibble so that you don't need to keep having to keep track of it
         + `mutate` the variable with the correct class
+
+
+---
+
+class: title-slide
+name: resources
+
+# Resources 
+
+---
+
+## Online Books
+
+[R for Data Science](https://r4ds.had.co.nz/)
+&gt;
+&gt;This book will teach you how to do data science with R: You’ll learn how to get your data into R, get it into the most useful structure, transform it, visualise it and model it. 
+&gt;
+
+[ModernDive: Statistical Inference via Data Science](https://moderndive.com/index.html)
+&gt;
+&gt;This is intended to be a gentle introduction to the practice of analyzing data and answering questions using data the way data scientists, statisticians, data journalists, and other researchers would.
+&gt;
+
+[Data Visualization: A practical Introduction](https://socviz.co/)
+&gt;
+&gt;This book is a hands-on introduction to the principles and practice of looking at and presenting data using R and ggplot.
+&gt;
+
+[Fundamentals of Data Visualization](https://serialmentor.com/dataviz/)
+&gt;
+&gt;The book is meant as a guide to making visualizations that accurately reflect the data, tell a story, and look professional.  Even though nearly all of the figures in this book were made with R and ggplot2, this is not an R book.  It focuses on the concepts and the figures, not on the code.
+&gt;
+
+
+## Open source R-based Courses
+
+Oregon Health &amp; Science University - *Alison Hill*
+[Introduction to Biostatistics for the Basic Sciences](https://ohsu-conj620.netlify.com/index.html)
+
+
+Duke - *Mine Cetinkaya-Rundel*
+[Intro to Data Science](http://www2.stat.duke.edu/courses/Spring18/Sta199/)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
