@@ -1,0 +1,102 @@
+---
+title: "Cat Lovers"
+date: "`r Sys.Date()`"
+output: 
+  html_document: 
+    fig_height: 4
+    fig_width: 9
+---
+
+A survey asked respondents their name and number of cats. The instructions said to enter the number of cats as a numerical value.
+
+
+```{r message=FALSE}
+
+library(tidyverse)
+library(DT)
+
+cat_lovers <- read_csv("../data/cat-lovers.csv")
+
+```
+
+
+```{r echo=FALSE}
+cat_lovers %>%
+  datatable()
+```
+
+
+## Oh why won't you work?!
+
+```{r}
+cat_lovers %>%
+  summarise(mean = mean(number_of_cats))
+```
+
+---
+
+## Oh why won't you still work??!!
+
+```{r}
+cat_lovers %>%
+  summarise(mean_cats = mean(number_of_cats, na.rm = TRUE))
+```
+
+---
+
+## Take a breath and look at your data
+
+.question[
+What is the type of the `number_of_cats` variable?
+]
+
+```{r}
+glimpse(cat_lovers)
+```
+
+---
+
+## Let's take another look
+
+.small[
+```{r echo=FALSE}
+cat_lovers %>%
+  datatable()
+```
+]
+
+---
+
+## Sometimes you need to babysit your respondents
+
+```{r, ebal = FALSE}
+cat_lovers %>%
+  mutate(__) %>%
+  summarise(mean_cats = mean(number_of_cats))
+```
+
+---
+
+## Always you need to respect data types
+
+```{r, eval = FALSE}
+cat_lovers %>%
+  mutate(__) %>%
+  summarise(mean_cats = mean(number_of_cats))
+```
+
+---
+
+## Now that we know what we're doing...
+
+```{r}
+cat_lovers <- cat_lovers %>%
+  mutate(
+    number_of_cats = case_when(
+      name == "Ginger Clark" ~ "2",
+      name == "Doug Bass"    ~ "3",
+      TRUE                   ~ number_of_cats
+      ),
+    number_of_cats = as.numeric(number_of_cats)
+    )
+```

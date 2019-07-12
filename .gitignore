@@ -15,9 +15,10 @@ website/*/*/*.md
 *_files
 # html output
 assignments/*/*.html
+appex/*/*.html
 exams/*/*.html
 extras/*/*.html
 labs/*/*.html
 project/*.html
 project/*/*/*.html
-#slides/*/*.html
+slides/*/*.html
