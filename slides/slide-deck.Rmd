@@ -909,19 +909,6 @@ ncbikecrash %>%
 
 ---
 class: title-slide
-
-# Coffee Time
-
-.center[
-![](img/hammer.gif)
-]
-
---
-
-## Can't touch this
-
----
-class: title-slide
 name: coding
 
 # Coding style <br> `r emo::ji('man_in_tuxedo')`
@@ -1489,6 +1476,7 @@ class(mean_cats)
 ---
 
 class: center, middle
+name: factors
 
 # Factors
 
@@ -1618,4 +1606,36 @@ Oregon Health & Science University - *Alison Hill* [Introduction to Biostatistic
 
 
 Duke - *Mine Cetinkaya-Rundel* [Intro to Data Science](http://www2.stat.duke.edu/courses/Spring18/Sta199/)
+
+---
+class: title-slide
+name: coffee
+
+# Coffee Time
+
+.center[
+![](img/hammer.gif)
+]
+
+## Can't touch this
+
+
+---
+
+class: center 
+name: index
+
+These links will take you to eac relevant point in the presentation
+
+- [Home](https://cih-briefr.netlify.com/#1)
+
+- [Tidy Data](https://cih-briefr.netlify.com/#tidy)
+
+- [Data Wrangling](https://cih-briefr.netlify.com/#wrangle)
+
+- [Coding Style](https://cih-briefr.netlify.com/#coding)
+
+- [Datasets in R](https://cih-briefr.netlify.com/#datasets)
+
+- [Dealing with Factors](https://cih-briefr.netlify.com/#factors)
 
