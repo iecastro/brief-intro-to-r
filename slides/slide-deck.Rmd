@@ -274,7 +274,7 @@ library(package_name)
 - For this project we'll need the following packages: 
 
 ```{r eval = FALSE}
-install.packages(c("tidyverse", "devtools", "datasauRus", "fivethirtyeight", "janitor"))
+install.packages(c("tidyverse", "devtools", "datasauRus", "fivethirtyeight", "janitor", "DT"))
 ```
 
 ---
