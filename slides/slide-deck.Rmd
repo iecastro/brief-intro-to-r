@@ -1619,7 +1619,6 @@ name: coffee
 
 ## Can't touch this
 
-
 ---
 
 class: center 
@@ -1639,3 +1638,4 @@ These links will take you to eac relevant point in the presentation
 
 - [Dealing with Factors](https://cih-briefr.netlify.com/#factors)
 
+- [Index](https://cih-briefr.netlify.com/#index)
