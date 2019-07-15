@@ -1566,7 +1566,9 @@ Source: [forcats.tidyverse.org](http://forcats.tidyverse.org/)
     + If you are absolutely sure of a data class, overwrite it in your
     tibble so that you don't need to keep having to keep track of it
         + `mutate` the variable with the correct class
-
+        
+- Check out Alison Hill's "Working with Data in R"  
+    `saved in the R folder of the RStudio project`
 
 ---
 
