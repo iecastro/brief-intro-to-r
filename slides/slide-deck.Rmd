@@ -17,6 +17,7 @@ library(tidyverse)
 library(fontawesome)
 library(dsbox)
 library(DT)
+library(memer)
 
 #xaringan::inf_mr(cast_from = "..")
 ```
@@ -217,10 +218,6 @@ knitr::include_graphics("img/engine-dashboard.png")
 ---
 
 ## `r fontawesome::fa("cloud")`  Let's take a tour - R / RStudio
-
-.center[
-![](/img/demo.png)
-]
 
 Follow this link and log in with your google account: 
 
@@ -1017,6 +1014,12 @@ x <- 2
 x = 2
 ```
 
+--
+
+```{r echo=FALSE, fig.align = "center"}
+knitr::include_graphics("img/assign.jpg")
+```
+
 ---
 
 ## Quotes
@@ -1604,10 +1607,89 @@ name: resources
 
 ## Open source R-based Courses
 
-Oregon Health & Science University - *Alison Hill* [Introduction to Biostatistics for the Basic Sciences](https://ohsu-conj620.netlify.com/index.html)
+*Alison Hill* - [Introduction to Biostatistics for the Basic Sciences](https://ohsu-conj620.netlify.com/index.html) - Oregon Health & Science University
 
 
-Duke - *Mine Cetinkaya-Rundel* [Intro to Data Science](http://www2.stat.duke.edu/courses/Spring18/Sta199/)
+*Mine Cetinkaya-Rundel* - [Intro to Data Science](http://www2.stat.duke.edu/courses/Spring18/Sta199/) - Duke
+
+---
+name: index
+
+These links will take you to each relevant section in the presentation
+
+- [Home](https://cih-briefr.netlify.com/#1)
+
+- [Tidy Data](https://cih-briefr.netlify.com/#tidy)
+
+- [Data Wrangling](https://cih-briefr.netlify.com/#wrangle)
+
+- [Coding Style](https://cih-briefr.netlify.com/#coding)
+
+- [Datasets in R](https://cih-briefr.netlify.com/#datasets)
+
+- [Dealing with Factors](https://cih-briefr.netlify.com/#factors)
+
+- [Index](https://cih-briefr.netlify.com/#index)  
+
+- [Memes](https://cih-briefr.netlify.com/#memes)
+
+---
+
+class: title-slide
+name: memes
+
+# Who want's to make memes? <br>  `r emo::ji("point_up")`
+
+---
+
+## Welcome to the `memer` package `r emo::ji("package")`
+
+```{r, eval = FALSE}
+remotes::install_github("sctyner/memer")
+library(memer)
+```
+
+>[memer](https://sctyner.github.io/memer/index.html) is a a `tidyverse`-compatible R package for creating memes
+>  
+
+--
+
+
+```{r}
+meme_get("OprahGiveaway") %>% 
+  meme_text_bottom("EVERYONE GETS A MEME!", size = 30)
+```
+
+---
+
+## What's in the package?
+
+```{r}
+meme_list()
+```
+
+---
+
+## Let's make a meme
+
+--
+
+```{r}
+meme_get("TheRockDriving") %>% 
+  meme_text_rock("Hey, how do I prep for an IRB audit?", 
+                 "\nPrint, \n...everything.")
+```
+
+---
+
+## Now you try
+
+```{r, eval = FALSE}
+
+meme_get("SuccessKid") %>% 
+  meme_text_bottom("ENTER TEXT HERE")
+
+```
 
 ---
 class: title-slide
@@ -1623,21 +1705,11 @@ name: coffee
 
 ---
 
-class: center 
-name: index
+class: center, middle
+name: maybe
 
-These links will take you to eac relevant point in the presentation
 
-- [Home](https://cih-briefr.netlify.com/#1)
+```{r echo=FALSE, fig.align = "center"}
+knitr::include_graphics("img/maybe.jpg")
+```
 
-- [Tidy Data](https://cih-briefr.netlify.com/#tidy)
-
-- [Data Wrangling](https://cih-briefr.netlify.com/#wrangle)
-
-- [Coding Style](https://cih-briefr.netlify.com/#coding)
-
-- [Datasets in R](https://cih-briefr.netlify.com/#datasets)
-
-- [Dealing with Factors](https://cih-briefr.netlify.com/#factors)
-
-- [Index](https://cih-briefr.netlify.com/#index)
