@@ -964,6 +964,12 @@ acs_subsetted_for_males
 
 ---
 
+```{r echo=FALSE, fig.align = "center", out.height="50%"}
+knitr::include_graphics("img/meaningful-variable-name.jpg")
+```
+
+---
+
 ## Spacing
 
 - Put a space before and after all infix operators (=, +, -, <-, etc.), and when naming arguments in function calls. 
@@ -1638,7 +1644,7 @@ These links will take you to each relevant section in the presentation
 class: title-slide
 name: memes
 
-# Who want's to make memes? <br>  `r emo::ji("point_up")`
+# Who wants to make a meme? <br>  `r emo::ji("point_up")`
 
 ---
 
