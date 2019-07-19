@@ -1661,7 +1661,7 @@ library(memer)
 --
 
 
-```{r}
+```{r, eval = TRUE, fig.retina=3}
 meme_get("OprahGiveaway") %>% 
   meme_text_bottom("EVERYONE GETS A MEME!", size = 30)
 ```
@@ -1680,7 +1680,7 @@ meme_list()
 
 --
 
-```{r}
+```{r, eval = TRUE, fig.retina=3}
 meme_get("TheRockDriving") %>% 
   meme_text_rock("Hey, how do I prep for an IRB audit?", 
                  "\nPrint, \n...everything.")
