@@ -1,0 +1,161 @@
+---
+title: "Lab NAME"
+subtitle: "Data wrangling and visualization"
+output: 
+  tufte::tufte_html:
+    tufte_variant: "envisioned"
+    highlight: pygments
+    css: lab.css
+link-citations: yes
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+```{marginfigure}
+For each exercise and on your own question you 
+answer include any relevant output (tables, summary statistics, plots) in your 
+answer. Doing this is easy! Just place any relevant R code in a code chunk, 
+and hit Knit HTML.
+```
+
+Some define statistics as the field that focuses on turning information into
+knowledge. The first step in that process is to summarize and describe the raw
+information - the data. In this lab we explore the `pizzaplace` dataset from the [`gt` package](https://gt.rstudio.com/reference/pizzaplace.html).
+
+>This dataset is unusual to say the least. It brings up more questions than answers. 
+
+
+# Packages
+
+In this lab we will work with the `tidyverse` package. We start by loading the package.
+
+```{r}
+library(tidyverse)
+
+```
+
+Note that these packages are also loaded in your R Markdown document.
+
+
+# Load the data
+
+The data frame we will be working with today is called `pizza` and it's in the `data` folder of this project.
+
+```{r}
+pizza <- read_csv("../data/pizza.csv")
+```
+
+
+This is synthetic dataset describing pizza sales for an imaginary pizza place. Each row is a pizza sold during 2015 - there are 32 different types of pizza in 4 different categories: classic, chicken, supreme, and veggie. 
+
+
+`pizza` is a tidy **data frame**, with each row 
+representing an **observation** and each column representing a **variable**.
+
+To view the data, click on the name of the data frame in the Environment tab.
+
+You can also take a quick peek at your data frame and view its dimensions 
+with the `glimpse` function.
+
+```{r glimpse}
+glimpse(pizza)
+```
+
+The description of the variables, i.e. the **codebook**, is given below.
+
+| Header                        |  Description
+|:----------------|:--------------------------------
+|`id`                           | The ID for the order, which consists of one or more pizzas at a give date and time
+|`date`                         | A character representation of the order date, expressed in the ISO 8601 date format (YYYY-MM-DD)
+|`time `                        | A character representation of the order time, expressed as a 24-hour time the ISO 8601 extended time format (hh:mm:ss)
+|`name`                         | The short name for the pizza
+|`size`                         | The size of the pizza, which can either be S, M, L, XL (rare!), or XXL (even rarer!); most pizzas are available in the S, M, and L sizes but exceptions apply
+|`type`                         | The category or type of pizza, which can either be classic, chicken, supreme, or veggie
+|`price`                        | The price of the pizza and the amount that it sold for (in USD)
+
+The `pizza` data frame is a trove of information. Let's think about 
+some questions we might want to answer with these data:
+
+- Which pizza has the lowest price?
+- Which major has the highest percentage of women?
+- How do the distributions of median income compare across major categories?
+- Do women tend to choose majors with lower or higher earnings?
+
+In the next section we aim to answer these questions.
+
+# Data wrangling and visualization
+
+## Which pizza has the lowest price?
+
+In order to answer this question all we need to do is sort the data. We use the
+`arrange` function to do this, and sort it by the `price` variable. 
+By default `arrange` sorts in ascending order, which is what we want here -- 
+we're interested in the pizza with the *lowest* price.
+
+```{r lowest-unemp}
+pizza %>%
+  arrange(price)
+```
+
+This gives us what we wanted, but not in an ideal form. Some of the variables are not 
+that useful (e.g. `id`, `time`).
+
+We can use the `select` function to choose which variables to display, and 
+in which order:
+
+```{marginfigure}
+Note how easily we expanded our code with adding another step to our pipeline,
+with the pipe operator: `%>%`.
+```
+
+```{r lowest-unemp-select}
+pizza %>%
+  arrange(price) %>%
+  select(type, name, size, price)
+```
+
+Ok, this is looking better, but do we really need to see every **small, pepperoni order** to
+understand that's the least expensive one. Not really! What do you think it's the second least expensive pizza?
+
+We can address this problem by using `distinct` to avoid printing
+duplicate rows (e.g. `name`). 
+
+```{r}
+pizza %>%
+  arrange(price) %>%
+  select(type, name, size, price) %>% 
+  distinct(.keep_all = TRUE)
+
+```
+
+*note that this works because we did not select `id` in this commnand*
+
+
+## Which pizza has the highest price?
+
+To answer such a question we need to arrange the data in descending order. For 
+example, if earlier we were interested in the major with the highest unemployment 
+rate, we would use the following:
+
+```{marginfigure}
+The `desc` function specifies that we want `price` in descending order.
+```
+
+```{r}
+pizza %>%
+  arrange(desc(price)) %>%
+  select(type, name, size, price) %>% 
+  distinct(.keep_all = TRUE)
+```
+
+
+## Let
+
+```{marginfigure}
+
+Let's  pretend this pizza dataset is a recruitment datapull: 
+
+```
+
