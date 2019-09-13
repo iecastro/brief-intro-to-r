@@ -12,12 +12,15 @@ output:
       countIncrementalSlides: false
 ---
 
-```{r packages, echo=FALSE, message=FALSE, warning=FALSE}
+```{r setup, include=FALSE}
 library(tidyverse)
 library(fontawesome)
 library(dsbox)
 library(DT)
 library(memer)
+
+
+knitr::opts_chunk$set(fig.retina = 3, warning = FALSE, message = FALSE)
 
 #xaringan::inf_mr(cast_from = "..")
 ```
@@ -1661,10 +1664,21 @@ library(memer)
 --
 
 
-```{r, eval = TRUE, fig.retina=3}
+```{r, eval=FALSE}
 meme_get("OprahGiveaway") %>% 
   meme_text_bottom("EVERYONE GETS A MEME!", size = 30)
+
 ```
+
+
+```{r, echo=FALSE}
+
+oprah <- meme_get("OprahGiveaway") %>% 
+  meme_text_bottom("EVERYONE GETS A MEME!", size = 30)
+
+oprah
+```
+
 
 ---
 
@@ -1680,7 +1694,7 @@ meme_list()
 
 --
 
-```{r, eval = TRUE, fig.retina=3}
+```{r, }
 meme_get("TheRockDriving") %>% 
   meme_text_rock("Hey, how do I prep for an IRB audit?", 
                  "\nPrint, \n...everything.")

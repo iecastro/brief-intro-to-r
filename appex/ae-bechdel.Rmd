@@ -96,3 +96,8 @@ ggplot(data = bechdel90_13, mapping = aes(x = clean_test, y = roi, color = binar
        y = "Return on investment",
        color = "Binary Bechdel result")
 ```
+
+x <- 2
+x * 3
+
+
