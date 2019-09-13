@@ -20,7 +20,10 @@ library(DT)
 library(memer)
 
 
-knitr::opts_chunk$set(fig.retina = 3, warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(fig.retina = 3, 
+                      warning = FALSE, 
+                      message = FALSE,
+                      fig.keep = "all")
 
 #xaringan::inf_mr(cast_from = "..")
 ```
