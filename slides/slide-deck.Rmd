@@ -1523,8 +1523,11 @@ glimpse(cat_lovers)
 ## But coerce when plotting
 
 ```{r}
-ggplot(cat_lovers, mapping = aes(x = handedness)) +
+p <- ggplot(cat_lovers, mapping = aes(x = handedness)) +
   geom_bar()
+
+p 
+
 ```
 
 ---
@@ -1535,11 +1538,15 @@ ggplot(cat_lovers, mapping = aes(x = handedness)) +
 cat_lovers <- cat_lovers %>%
   mutate(handedness = fct_relevel(handedness, 
                                   "right", "left", "ambidextrous"))
+
 ```
 
 ```{r}
-ggplot(cat_lovers, mapping = aes(x = handedness)) +
+p <- ggplot(cat_lovers, mapping = aes(x = handedness)) +
   geom_bar()
+
+p 
+
 ```
 
 ---
@@ -1664,21 +1671,17 @@ library(memer)
 --
 
 
-```{r, eval=FALSE}
+```{r, eval = FALSE}
 meme_get("OprahGiveaway") %>% 
   meme_text_bottom("EVERYONE GETS A MEME!", size = 30)
 
 ```
 
+```{r echo=FALSE, fig.align = "center"}
 
-```{r, echo=FALSE}
+knitr::include_graphics("img/oprah.png")
 
-oprah <- meme_get("OprahGiveaway") %>% 
-  meme_text_bottom("EVERYONE GETS A MEME!", size = 30)
-
-oprah
 ```
-
 
 ---
 
@@ -1694,11 +1697,19 @@ meme_list()
 
 --
 
-```{r, }
+```{r, eval = FALSE }
 meme_get("TheRockDriving") %>% 
   meme_text_rock("Hey, how do I prep for an IRB audit?", 
                  "\nPrint, \n...everything.")
 ```
+
+
+```{r echo=FALSE, fig.align = "center"}
+
+knitr::include_graphics("img/rock.png")
+
+```
+
 
 ---
 
